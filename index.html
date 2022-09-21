@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-6" http-equiv="encoding">
+
+    <title>OTP prompt generator</title>
+
+    <style type="text/css">
+        b body {
+            background: #F5F5F5;
+            font-family: arial;
+            font-size: 14px;
+            color: #000000;
+            line-height: 14px;
+        }
+
+        a {
+            color: #A3A3A3;
+            text-decoration: none;
+        }
+
+        a:hover {}
+
+        b,
+        strong {}
+
+        i,
+        em {}
+
+        pre {}
+
+        blockquote {}
+
+        #main {
+            width: 400px;
+            margin: auto;
+        }
+
+        #person1 {
+            position: absolute;
+            border-radius: 25px;
+            border: 2px solid #D6D6D6;
+            margin: 200px 0px 0px 0px;
+            width: 100px;
+            padding: 5px;
+            background: #FEFFF0;
+            font-family: arial;
+            font-size: 12px;
+            color: #808080;
+            line-height: 14px;
+            font-style: oblique;
+            text-align: center;
+        }
+
+        #person2 {
+            position: absolute;
+            border-radius: 25px;
+            border: 2px solid #D6D6D6;
+            margin: 200px 0px 0px 150px;
+            width: 100px;
+            padding: 5px;
+            background: #FEFFF0;
+            font-family: arial;
+            font-size: 12px;
+            color: #808080;
+            line-height: 14px;
+            font-style: oblique;
+            text-align: center;
+        }
+
+        #genbutt {
+            position: absolute;
+            border-radius: 25px;
+            border: 2px solid #D6D6D6;
+            margin: 200px 0px 0px 300px;
+            width: 100px;
+            padding: 5px 5px 5px 5px;
+            background: #fff;
+            cursor: pointer;
+            text-align: center;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        #genbutt:hover {
+            margin: 201px 0px 0px 301px;
+        }
+
+        #shitbox {
+            position: absolute;
+            border-radius: 25px;
+            border: 2px solid #D6D6D6;
+            padding: 20px;
+            background: #fff;
+            margin: 250px 0px 300px 0px;
+            width: 390px;
+        }
+
+        #premise {}
+
+        #thanks {
+            font-style: oblique;
+            float: right;
+            font-size: 12px;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        var prompts = [
+            "{A} và {B} khiêu vũ dưới ánh trăng.",
+            "{A} áp trán mình vào trán {B} để kiểm tra thân nhiệt.",
+          "{A} và {B} ôm nhau chìm vào trong giấc ngủ.",
+          "{A} chuẩn bị đi làm. {B} hỏi ",
+        ]
+
+    function clear1() {
+
+        document.getElementById("person1").value = "";
+        document.getElementById("person1").style.fontStyle = "normal";
+    }
+
+    function clear2() {
+
+        document.getElementById("person2").value = "";
+        document.getElementById("person2").style.fontStyle = "normal";
+    }
+
+     function fluff() {
+
+        // Get names of OTP
+        var A = document.getElementById("person1").value;
+        var B = document.getElementById("person2").value;
+
+        // Get random prompt
+        var R1 = Math.floor(Math.random() * prompts.length);
+        var str = prompts[R1] 
+
+        // Replace {A} & {B} in prompt with OTP names
+        var result = str.replace(/{A}/g, A).replace(/{B}/g, B);
+
+        document.getElementById("premise").innerHTML = result;
+    }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="main">
+
+        <form><input type="text" name="otp1" value="Person A" id="person1" onfocus="clear1()"></form>
+        <form><input type="text" name="otp2" value="Person B" id="person2" onfocus="clear2()"></form>
+        <div id="genbutt" onclick="fluff()">Generate</div>
+
+        <div id="shitbox">
+
+            <b>Your prompt:</b>
+            <span id="premise"></span>
+            <br /><br />
+            <div id="thanks"></span>
+
+            </div>
+
+        </div>
+
+</body>
+
+</html>
