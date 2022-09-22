@@ -99,6 +99,54 @@
           font-style: oblique;
           text-align: center;
         }
+        
+        #person5 {
+          position: absolute;
+          border-radius: 25px;
+          border: 2px solid #D6D6D6;
+          margin: 250px 0px 0px -30px;
+          width: 100px;
+          padding: 5px;
+          background: #F3E5CA;
+          font-family: arial;
+          font-size: 12px;
+          color: #000000;
+          line-height: 14px;
+          font-style: oblique;
+          text-align: center;
+        }
+        
+        #person6 {
+          position: absolute;
+          border-radius: 25px;
+          border: 2px solid #D6D6D6;
+          margin: 250px 0px 0px 70px;
+          width: 100px;
+          padding: 5px;
+          background: #F3E5CA;
+          font-family: arial;
+          font-size: 12px;
+          color: #000000;
+          line-height: 14px;
+          font-style: oblique;
+          text-align: center;
+        }
+        
+        #person7 {
+          position: absolute;
+          border-radius: 25px;
+          border: 2px solid #D6D6D6;
+          margin: 250px 0px 0px 140px;
+          width: 100px;
+          padding: 5px;
+          background: #F3E5CA;
+          font-family: arial;
+          font-size: 12px;
+          color: #000000;
+          line-height: 14px;
+          font-style: oblique;
+          text-align: center;
+        }
 
         #genbutt {
             position: absolute;
@@ -126,7 +174,7 @@
             border: 2px solid #D6D6D6;
             padding: 20px;
             background: #fff;
-            margin: 250px 0px 300px -90px;
+            margin: 350px 0px 300px -90px;
             width: 590px;
         }
 
@@ -194,6 +242,12 @@
 "<b>{C}</b> Mắng {A} vì ăn vặt đêm khuya có thể tăng cân. <br><b>{B} đưa xiên thịt nướng cho {A}: </b>Ăn đi, calo bị đốt cháy hết rồi nên không tăng cân được đâu. <br><b>{C}: </b>…",
 "<br><b>{B}</b>: Chơi nối chữ không? <br><b>{A}</b>: Chơi. <br><b>{B}</b>: Con cái. <br><b>{A}</b>: Cái ô. <br><b>{B}</b>: Omae wa mou shindeiru. ",
 "{A} và {B} đang chơi game. {A} mệt quá ngủ luôn trên sàn nhà. {B} thấy vậy liền mở tủ lấy chăn và lên giường đi ngủ, mặc kệ {A} co ro dưới sàn",
+"<br><b>{A}</b>: {E} yêu {D}. <br><b>{B}</b>: Còn {G} yêu gái 2D. ",
+"<br><b>{A}</b>: Con mèo kia dễ thương thật đấy. <br><b>{B}</b>: {F} dễ thương hơn! ",
+"<br><b>{A}</b>: {D} có hạnh phúc không? <br><b>{B}</b>: Không. <br><b>{A}</b>: Tại sao? <br><b>{B}</b>: {G} không muốn hạnh phúc nếu không có {F} ở đây. ",
+"<br><b>{B}</b>: Ai ăn mất cái pudding {G} để ở bàn? <br><b>{A}</b>: Ai bảo {D} không viết tên lên đồ của mình làm {E} tưởng {D} cho {E}. <br><b>{B}</b>: (Lấy bút viết tên mình lên tay {A}) <br><b>{A}</b>: {D} làm cái gì thế? <br><b>{B}</b>: Viết tên lên đồ của {G}.",
+"<br><b>{B}</b>: Điểm nào của {G}  khiến {F}  thích {G}  thế? <br><b>{A}</b>: Cái mặt! ",
+
             
         ]
 
@@ -213,6 +267,22 @@
         document.getElementById("person3").value = "";
         document.getElementById("person3").style.fontStyle = "normal";
     }
+    function clear4() {
+        document.getElementById("person4").value = "";
+        document.getElementById("person4").style.fontStyle = "normal";
+    }
+    function clear5() {
+        document.getElementById("person5").value = "";
+        document.getElementById("person5").style.fontStyle = "normal";
+    }
+    function clear6() {
+        document.getElementById("person6").value = "";
+        document.getElementById("person6").style.fontStyle = "normal";
+    }
+    function clear7() {
+        document.getElementById("person7").value = "";
+        document.getElementById("person7").style.fontStyle = "normal";
+    }
 
      function fluff() {
 
@@ -220,15 +290,47 @@
         var A = document.getElementById("person1").value;
         var B = document.getElementById("person2").value;
         var C = document.getElementById("person3").value;
+        var D = document.getElementById("person4").value;
+        var E = document.getElementById("person5").value;
+        var F = document.getElementById("person6").value;
+        var G = document.getElementById("person7").value;
 
         // Get random prompt
         var R1 = Math.floor(Math.random() * prompts.length);
         var str = prompts[R1] 
 
         // Replace {A} , {B} & {C} in prompt with OTP names
-        var result = str.replace(/{A}/g, A).replace(/{B}/g, B).replace(/{C}/g, C);
+        var result = str.replace(/{A}/g, A).replace(/{B}/g, B).replace(/{C}/g, C).replace(/{D}/g, D).replace(/{E}/g, E).replace(/{F}/g, F).replace(/{G}/g, G);
 
         document.getElementById("premise").innerHTML = result;
+    }
+        function swapname() { 
+        //Swapping OTP names     
+       var temp1 = A;
+       A = B;
+       B = temp1;
+       
+       var temp3 = E;
+       E = G;
+       G = temp3;
+       
+       var temp4 = D;
+       D = F;
+       F = temp4;
+       
+        var result = str.replace(/{A}/g, A).replace(/{B}/g, B).replace(/{C}/g, C).replace(/{D}/g, D).replace(/{E}/g, E).replace(/{F}/g, F).replace(/{G}/g, G); 
+       document.getElementById("premise").innerHTML = result; 
+    }
+    
+       function personsback(){
+        if (document.getElementById("person1").value=="") document.getElementById("person1").value="A";
+        if (document.getElementById("person2").value=="") document.getElementById("person2").value="B";
+        if (document.getElementById("person3").value=="") document.getElementById("person3").value="C";
+        if (document.getElementById("person4").value=="") document.getElementById("person4").value="D";
+        if (document.getElementById("person5").value=="") document.getElementById("person5").value="E";
+        if (document.getElementById("person6").value=="") document.getElementById("person6").value="F";
+        if (document.getElementById("person7").value=="") document.getElementById("person7").value="G";
+        
     }
 
     </script>
@@ -242,6 +344,11 @@
         <form><input type="text" name="otp1" value="Person A" id="person1" onfocus="clear1()"></form>
         <form><input type="text" name="otp2" value="Person B" id="person2" onfocus="clear2()"></form>
         <form><input type="text" name="otp3" value="Person C" id="person3" onfocus="clear3()"></form>
+        <form><input type="text" name="otp4" value="A gọi B là" id="person4" onfocus="clear4()"></form>
+        <form><input type="text" name="otp5" value="A xưng là" id="person5" onfocus="clear5()"></form>
+        <form><input type="text" name="otp6" value="B gọi A là" id="person6" onfocus="clear6()"></form>
+        <form><input type="text" name="otp7" value="B xưng là" id="person7" onfocus="clear7()"></form>
+        <div id="swapbutt" onclick="swapname()">Đổi vị trí tên</div>
         <div id="genbutt" onclick="fluff()">Generate</div>
 
         <div id="shitbox">
