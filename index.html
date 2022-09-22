@@ -180,6 +180,12 @@
 
         #premise {}
         
+        #thanks {
+            font-style: oblique;
+            float: right;
+            font-size: 12px;
+        }
+        
         #swapbutt { 
           position: absolute; 
           border-radius: 25px; 
@@ -199,12 +205,16 @@
         
         #swapbutt:hover { margin: 101px 0px 0px 121px; background: #ece75f; 
         }
-
-        #thanks {
-            font-style: oblique;
-            float: right;
-            font-size: 12px;
+        
+        tr, td {
+          border-radius: 25px;
+          border: 2px solid #f25278;
+          padding: 4px;
+          background-color: #FFFFFF;
+          text-align: center;
         }
+        
+        tr, td:hover {background: #ece75f;
     </style>
 
     <script type="text/javascript">
@@ -274,18 +284,15 @@
     function clear1() {
 
         document.getElementById("person1").value = "";
-        document.getElementById("person1").style.fontStyle = "normal";
     }
 
     function clear2() {
 
         document.getElementById("person2").value = "";
-        document.getElementById("person2").style.fontStyle = "normal";
     }
     
     function clear3() {
         document.getElementById("person3").value = "";
-        document.getElementById("person3").style.fontStyle = "normal";
     }
     function clear4() {
         document.getElementById("person4").value = "";
