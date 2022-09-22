@@ -276,18 +276,14 @@
 "<br><b>{A}</b>: Con mèo kia dễ thương thật đấy. <br><b>{B}</b>: {F} dễ thương hơn! ",
 "<br><b>{A}</b>: {D} có hạnh phúc không? <br><b>{B}</b>: Không. <br><b>{A}</b>: Tại sao? <br><b>{B}</b>: {G} không muốn hạnh phúc nếu không có {F} ở đây. ",
 "<br><b>{B}</b>: Ai ăn mất cái pudding {G} để ở bàn? <br><b>{A}</b>: Ai bảo {D} không viết tên lên đồ của mình làm {E} tưởng {D} cho {E}. <br><b>{B}</b>: (Lấy bút viết tên mình lên tay {A}) <br><b>{A}</b>: {D} làm cái gì thế? <br><b>{B}</b>: Viết tên lên đồ của {G}.",
-"<br><b>{B}</b>: Điểm nào của {G} khiến {F} thích {G} thế? <br><b>{A}</b>: Cái mặt! ",
-
-            
+"<br><b>{B}</b>: Điểm nào của {G} khiến {F} thích {G} thế? <br><b>{A}</b>: Cái mặt! ",          
         ]
 
     function clear1() {
-
         document.getElementById("person1").value = "";
     }
 
     function clear2() {
-
         document.getElementById("person2").value = "";
     }
     
@@ -322,9 +318,8 @@
         var R1 = Math.floor(Math.random() * prompts.length);
         var str = prompts[R1] 
 
-        // Replace {A} , {B} & {C} in prompt with OTP names
+        // Replace {A} & {B} in prompt with OTP names
         var result = str.replace(/{A}/g, A).replace(/{B}/g, B).replace(/{C}/g, C).replace(/{D}/g, D).replace(/{E}/g, E).replace(/{F}/g, F).replace(/{G}/g, G);
-
         document.getElementById("premise").innerHTML = result;
     }
         function swapname() { 
