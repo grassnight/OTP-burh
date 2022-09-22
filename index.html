@@ -179,35 +179,6 @@
             font-size: 12px;
         }
         
-        #swapbutt { 
-          position: absolute; 
-          border-radius: 25px; 
-          border: 2px solid #f25278; 
-          margin: 100px 0px 0px 120px; 
-          width: 175px; 
-          padding: 5px 5px 5px 5px; 
-          background: #fff; 
-          cursor: pointer; 
-          text-align: center; 
-          -webkit-user-select: none; 
-          -moz-user-select: none; 
-          -ms-user-select: none; 
-          user-select: none; 
-        
-        }
-        
-        #swapbutt:hover { margin: 101px 0px 0px 121px; background: #ece75f; 
-        }
-        
-        tr, td {
-          border-radius: 25px;
-          border: 2px solid #f25278;
-          padding: 4px;
-          background-color: #FFFFFF;
-          text-align: center;
-        }
-        
-        tr, td:hover {background: #ece75f;
     </style>
 
     <script type="text/javascript">
@@ -314,25 +285,7 @@
         // Replace {A} & {B} in prompt with OTP names
         var result = str.replace(/{A}/g, A).replace(/{B}/g, B).replace(/{C}/g, C).replace(/{D}/g, D).replace(/{E}/g, E).replace(/{F}/g, F).replace(/{G}/g, G);
         document.getElementById("premise").innerHTML = result;
-    }
-        function swapname() { 
-        //Swapping OTP names     
-       var temp1 = A;
-       A = B;
-       B = temp1;
-       
-       var temp2 = E;
-       E = G;
-       G = temp2;
-       
-       var temp3 = D;
-       D = F;
-       F = temp3;
-       
-       var result = str.replace(/{A}/g, A).replace(/{B}/g, B).replace(/{C}/g, C).replace(/{D}/g, D).replace(/{E}/g, E).replace(/{F}/g, F).replace(/{G}/g, G); 
-       document.getElementById("premise").innerHTML = result; 
-    }
-    
+    }   
        function personsback(){
         if (document.getElementById("person1").value=="") document.getElementById("person1").value="A";
         if (document.getElementById("person2").value=="") document.getElementById("person2").value="B";
@@ -360,7 +313,6 @@
         <form><input type="text" name="otp6" value="B gọi A là" id="person6" onfocus="clear6()"></form>
         <form><input type="text" name="otp7" value="B xưng là" id="person7" onfocus="clear7()"></form>
         <div id="genbutt" onclick="fluff()">Generate</div>
-        <div id="swapbutt" onclick="swapname()">Đổi vị trí tên</div>
         <div id="shitbox">
             
             <b>Ý tưởng: </b>
