@@ -300,14 +300,14 @@
         var D = document.getElementById("person4").value;
         var E = document.getElementById("person5").value;
         var F = document.getElementById("person6").value;
-        var H = document.getElementById("person7").value;
+        var G = document.getElementById("person7").value;
 
         // Get random prompt
         var R1 = Math.floor(Math.random() * prompts.length);
         var str = prompts[R1] 
 
         // Replace {A} & {B} in prompt with OTP names
-        var result = str.replace(/{A}/g, A).replace(/{B}/g, B).replace(/{C}/g, C).replace(/{D}/g, D).replace(/{E}/g, E).replace(/{F}/g, F).replace(/{H}/g, H);
+        var result = str.replace(/{A}/g, A).replace(/{B}/g, B).replace(/{C}/g, C).replace(/{D}/g, D).replace(/{E}/g, E).replace(/{F}/g, F).replace(/{G}/g, G);
         document.getElementById("premise").innerHTML = result;
     }
         function swapname() { 
@@ -317,14 +317,14 @@
        B = temp1;
        
        var temp2 = E;
-       E = H;
-       H = temp2;
+       E = G;
+       G = temp2;
        
        var temp3 = D;
        D = F;
        F = temp3;
        
-        var result = str.replace(/{A}/g, A).replace(/{B}/g, B).replace(/{C}/g, C).replace(/{D}/g, D).replace(/{E}/g, E).replace(/{F}/g, F).replace(/{H}/g, H); 
+        var result = str.replace(/{A}/g, A).replace(/{B}/g, B).replace(/{C}/g, C).replace(/{D}/g, D).replace(/{E}/g, E).replace(/{F}/g, F).replace(/{G}/g, G); 
        document.getElementById("premise").innerHTML = result; 
     }
     
@@ -335,7 +335,7 @@
         if (document.getElementById("person4").value=="") document.getElementById("person4").value="D";
         if (document.getElementById("person5").value=="") document.getElementById("person5").value="E";
         if (document.getElementById("person6").value=="") document.getElementById("person6").value="F";
-        if (document.getElementById("person7").value=="") document.getElementById("person7").value="H";
+        if (document.getElementById("person7").value=="") document.getElementById("person7").value="G";
         
     }
 
