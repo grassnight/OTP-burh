@@ -210,7 +210,7 @@
     <script type="text/javascript">
 
         var prompts = [
-            "<br><b>{B}</b>: Chuẩn bị đi làm. <br><b>{A}</b>: Có quên gì không? <br><b>{B}</b>: *Hôn lên má {A}. ",
+            "<br><b>{B}</b>: (Chuẩn bị đi làm) <br><b>{A}</b>: Có quên gì không? <br><b>{B}</b>: *Hôn lên má {A}. ",
 "<br><b>Sự kiện săn phù thủy:</b> {A} nghĩ ra phương thuốc chữa bệnh cho {B}. Sau này {B} bị dân làng ép trở thành người thiêu sống {A} vì họ nghi ngờ {A} là phù thủy. ",
 "{B} bí mật trộn thuốc ngủ vào cốc nước của {A}.",
 "{A} và {B} là thanh mai trúc mã. ",
@@ -266,7 +266,7 @@
 "<br><b>{A}</b>: Con mèo kia dễ thương thật đấy. <br><b>{B}</b>: {F} dễ thương hơn! ",
 "<br><b>{A}</b>: {D} có hạnh phúc không? <br><b>{B}</b>: Không. <br><b>{A}</b>: Tại sao? <br><b>{B}</b>: {G} không muốn hạnh phúc nếu không có {F} ở đây. ",
 "<br><b>{B}</b>: Ai ăn mất cái pudding {G} để ở bàn? <br><b>{A}</b>: Ai bảo {D} không viết tên lên đồ của mình làm {E} tưởng {D} cho {E}. <br><b>{B}</b>: (Lấy bút viết tên mình lên tay {A}) <br><b>{A}</b>: {D} làm cái gì thế? <br><b>{B}</b>: Viết tên lên đồ của {G}.",
-"<br><b>{B}</b>: Điểm nào của {G}  khiến {F}  thích {G}  thế? <br><b>{A}</b>: Cái mặt! ",
+"<br><b>{B}</b>: Điểm nào của {G} khiến {F} thích {G} thế? <br><b>{A}</b>: Cái mặt! ",
 
             
         ]
@@ -289,19 +289,15 @@
     }
     function clear4() {
         document.getElementById("person4").value = "";
-        document.getElementById("person4").style.fontStyle = "normal";
     }
     function clear5() {
         document.getElementById("person5").value = "";
-        document.getElementById("person5").style.fontStyle = "normal";
     }
     function clear6() {
         document.getElementById("person6").value = "";
-        document.getElementById("person6").style.fontStyle = "normal";
     }
     function clear7() {
         document.getElementById("person7").value = "";
-        document.getElementById("person7").style.fontStyle = "normal";
     }
 
      function fluff() {
@@ -330,13 +326,13 @@
        A = B;
        B = temp1;
        
-       var temp3 = E;
+       var temp2 = E;
        E = G;
-       G = temp3;
+       G = temp2;
        
-       var temp4 = D;
+       var temp3 = D;
        D = F;
-       F = temp4;
+       F = temp3;
        
         var result = str.replace(/{A}/g, A).replace(/{B}/g, B).replace(/{C}/g, C).replace(/{D}/g, D).replace(/{E}/g, E).replace(/{F}/g, F).replace(/{G}/g, G); 
        document.getElementById("premise").innerHTML = result; 
