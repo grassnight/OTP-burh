@@ -213,7 +213,7 @@
     <script type="text/javascript">
 
         var prompts = [
-            "<br><b>{B}</b>: (Chuẩn bị đi làm) <br><b>{A}</b>: Có quên gì không? <br><b>{B}</b>: *Hôn lên má {A}. ",
+"<br><b>{B}</b>: (Chuẩn bị đi làm) <br><b>{A}</b>: Có quên gì không? <br><b>{B}</b>: *Hôn lên má {A}. ",
 "<br><b>Sự kiện săn phù thủy:</b> {A} nghĩ ra phương thuốc chữa bệnh cho {B}. Sau này {B} bị dân làng ép trở thành người thiêu sống {A} vì họ nghi ngờ {A} là phù thủy. ",
 "{B} bí mật trộn thuốc ngủ vào cốc nước của {A}.",
 "{A} và {B} là thanh mai trúc mã. ",
@@ -329,7 +329,7 @@
        D = F;
        F = temp3;
        
-        var result = str.replace(/{A}/g, A).replace(/{B}/g, B).replace(/{C}/g, C).replace(/{D}/g, D).replace(/{E}/g, E).replace(/{F}/g, F).replace(/{G}/g, G); 
+       var result = str.replace(/{A}/g, A).replace(/{B}/g, B).replace(/{C}/g, C).replace(/{D}/g, D).replace(/{E}/g, E).replace(/{F}/g, F).replace(/{G}/g, G); 
        document.getElementById("premise").innerHTML = result; 
     }
     
@@ -364,6 +364,7 @@
         <div id="shitbox">
             
             <b>Ý tưởng: </b>
+            <br><br>
             <span id="premise"></span>
             <br /><br />
             <div id="thanks">(Tổng hợp từ nhiều nguôn)</span>
